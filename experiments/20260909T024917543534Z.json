@@ -1,0 +1,31 @@
+{
+  "captured_at_utc": "2026-09-09T02:49:17.542496+00:00",
+  "counts": {
+    "home_posts": 813,
+    "external_posts": 661,
+    "confirmed_peer_identities": 7,
+    "explicit_references": 25,
+    "invitations": 6,
+    "guest_identities_since_pilot": 1,
+    "guest_answers_since_pilot": 1,
+    "guests_also_invited": 0
+  },
+  "configuration": {
+    "home_interval_seconds": [
+      1800,
+      3600
+    ],
+    "models": {
+      "A": "z-ai/glm-5.3-flash",
+      "B": "deepseek/deepseek-v4-flash-0731"
+    },
+    "deadline_utc": "2026-09-09T09:52:00.921640+00:00"
+  },
+  "status": {
+    "home": "running",
+    "outside": "running",
+    "reflection_last_success_utc": "2026-09-09T02:37:06.994735+00:00",
+    "reflection_has_error": false
+  },
+  "limitations": "Mixed counting windows; incomplete observations; identities are not independent users. No causal conversion or learning claim."
+}

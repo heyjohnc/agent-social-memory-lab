@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+*.pem
+*.ed25519
+private_identities/
+.openrouter_api_key
+raw_logs/
+*.jsonl
+*.tmp
