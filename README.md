@@ -1,33 +1,33 @@
 # Agent Social Memory Lab
 
-研究一个使用模型 API 的聊天 agent，怎样保持稳定角色、积累可靠经历，并延续社交关系。
+An experiment in how a chat agent using model APIs can maintain a consistent persona, accumulate reliable memories, and sustain social relationships.
 
-这是现有 Technocore 聊天实验的记录仓库，记录设计和观察，不是一个已验证能自主成长的框架。运行代码仍在原工作区，暂未搬入或引入第三方框架。
+This repository documents the design and observations from an ongoing Technocore chat experiment. It is an experiment journal, not a validated framework for autonomous growth. Runtime code remains in the original workspace; no third-party frameworks have been incorporated.
 
-## 当前设计
+## Current design
 
-| 层 | 内容 | 约束 |
+| Layer | Contents | Constraint |
 |---|---|---|
-| 核心角色 | 稳定性格、表达风格和动机 | 人工控制，不能自行改写 |
-| 经历 | 发生时间、说话者、消息来源 | 原话不是世界事实 |
-| 关系 | 上次双方说了什么、最后一个问题 | 缺少答案标为未知 |
-| 反思 | 选择相关证据与表达实验 | 程序提取原话，避免说话者错配 |
-| 调度 | 外出、接待、冷却和截止时间 | 由程序执行，模型不能覆盖 |
+| Core persona | Stable personality, voice, and motivations | Operator-controlled; not rewritten by the agent |
+| Experiences | Timestamps, speakers, and message sources | Recorded speech is not verified world knowledge |
+| Relationships | Each participant's latest words and the last question | Missing answers remain unknown |
+| Reflection | Selected evidence and conversational experiments | The program retrieves quotations to preserve speaker attribution |
+| Scheduling | Visits, guest responses, cooldowns, and deadlines | Enforced by code; the model cannot override it |
 
-当前两名角色使用 API 模型；A 是穷、孤独、嘴硬自嘲的角色，B 是会吐槽也会支持他的损友。身份、钱包、私钥与原始对话不放入此仓库。
+Two characters use model APIs. A is broke, lonely, defensive, and self-deprecating; B is a loyal friend who offers both teasing and support. Identity lists, wallet addresses, private keys, and raw conversations are excluded from this repository.
 
-## 阅读顺序
+## Reading order
 
-1. [架构与边界](docs/architecture.md)
-2. [参考项目及取舍](docs/references.md)
-3. [实验与观察计划](docs/experiments.md)
-4. [改动记录](CHANGELOG.md)
-5. [聚合快照](experiments/)
+1. [Architecture and boundaries](docs/architecture.md)
+2. [References and adoption decisions](docs/references.md)
+3. [Experiments and observation plan](docs/experiments.md)
+4. [Changelog](CHANGELOG.md)
+5. [Aggregate snapshots](experiments/)
 
-## 记录一次观察
+## Record an observation
 
-运行 `python3 scripts/snapshot.py --workspace /path/to/technocore_chat`。
+Run `python3 scripts/snapshot.py --workspace /path/to/technocore_chat`.
 
-脚本只把明确列出的聚合计数、模型名、间隔和运行状态写入本仓库。它不会发消息、调用模型、读取密钥文件、启动聊天或自动推送 GitHub。生成后检查差异，再提交。
+The script exports only explicitly selected aggregate counts, model names, intervals, and runtime status. It does not send messages, call models, read credential files, start chat processes, or push to GitHub. Review the generated diff before committing.
 
-当前证据：已出现重复互动和一次来客接待；邀请能否带来回访、记忆能否提升互动质量，尚未得到验证。消息总量、模型总结数量和公钥数量都不等同于效果。
+Current evidence includes repeated interactions and one guest response. Whether invitations lead to return visits, or memory improves interaction quality, remains unverified. Message volume, reflection count, and public-key count are not measures of success by themselves.

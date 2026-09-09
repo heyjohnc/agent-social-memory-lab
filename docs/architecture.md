@@ -1,35 +1,35 @@
-# 架构与边界
+# Architecture and boundaries
 
 ```mermaid
 flowchart LR
-    A[读取公开消息] --> B[识别说话者和明确引用]
-    B --> C[经历与熟人记录]
-    C --> D[按当前对象取少量记忆]
-    D --> E[固定角色与当前活动规则]
-    E --> F[生成并校验回复]
-    F --> G[发送后回读验证]
+    A[Read public messages] --> B[Identify speakers and explicit references]
+    B --> C[Experience and relationship records]
+    C --> D[Retrieve a small amount of relevant memory]
+    D --> E[Fixed persona and current activity rules]
+    E --> F[Generate and validate a reply]
+    F --> G[Send and verify by reading back]
     G --> C
-    C --> H[定期选择证据与表达实验]
+    C --> H[Periodically select evidence and expression experiments]
     H --> D
 ```
 
-## 记忆
+## Memory
 
-- 经历保存来源和说话者；公钥证明的是签名身份，不是独立人类用户。
-- 熟人计数只依据明确引用；主动接别人的话不计为对方回应。
-- 遇到熟人时提供双方最近原话和 A 的最后一个问题，不加载全量历史。
-- 后续答案是否存在默认为未知。当前消息是否回答了问题，由本轮结合上下文判断；不把未知写为拒绝。
+- Experiences retain their source and speaker. A public key establishes a signing identity, not an independent human user.
+- Acquaintance counts require explicit references. Answering someone does not count as that person answering us.
+- When encountering a known participant, the model receives both sides of the latest exchange and A's last question, rather than the entire history.
+- Whether a later answer exists defaults to unknown. The current turn evaluates whether the incoming message answers the question; unknown is never recorded as rejection.
 
-## 反思
+## Reflection
 
-初版自由总结曾把 A 自己的说法归给其他参与者，也曾引用不存在的消息。现行版本限制可选证据编号，模型只选择观察的说话者和编号，原话由程序填充。
+Early free-form summaries attributed A's statements to other participants and cited nonexistent messages. The current version restricts available evidence IDs. The model selects the speaker and message ID; the program supplies the original text.
 
-事实层记录“谁说了什么、是否明确引用、是否发出邀请”。推测层只保留供审阅。自动影响行为的部分限定为预设表达选项：具体提问、接续话题、简短角色表达、回应具体细节。
+Recorded observations cover who said what, whether a message explicitly referenced A, and whether an invitation was sent. Hypotheses are retained for review. Automatic behavioral influence is limited to predefined expression options: ask a concrete question, continue a topic, briefly express the persona, or acknowledge a specific detail.
 
-这改善了可追溯性，不证明模型推测正确，也不保证社交能力逐轮提高。
+This improves traceability. It does not establish that model hypotheses are correct or that social ability improves with each iteration.
 
-## 运行边界
+## Runtime boundaries
 
-原项目执行消息签名、地址拦截、邀请冷却、来客优先和有限运行时长。该仓库不包含运行凭证或后台进程。
+The original runtime enforces message signing, address checks, invitation cooldowns, guest priority, and bounded operating periods. This repository contains neither runtime credentials nor background processes.
 
-尚未实施：正式接单、工作验收活动、有限轮次游戏、独立信箱、模型权重训练。
+Not implemented: formal task acceptance, work-review activities, bounded games, a dedicated mailbox, or model-weight training.

@@ -1,30 +1,30 @@
-# 实验与观察计划
+# Experiments and observation plan
 
-## 已观察到
+## Observed baseline
 
-截至 2026-09-09 02:46 UTC 的一次读取：661 条累计外出消息，7 个明确回应的身份、25 条明确引用回复，6 次邀请；社交试运行后观察到 1 个来客身份和 1 次接待。
+A reading at 2026-09-09 02:46 UTC recorded 661 lifetime external messages, 7 identities with explicit replies, 25 explicitly referencing replies, and 6 invitations. Since the social pilot began, one guest identity and one guest response were observed.
 
-来客身份不在邀请名单内，不能归因为邀请成功。上述外出和回复是全程累计，来客从社交试运行开始记录，窗口不同，不能直接相除作为转化率。
+The guest was not in the invitation list, so the visit cannot be attributed to an invitation. External messages and replies are lifetime totals, while guest tracking began with the social pilot. These different windows cannot be divided directly to calculate a conversion rate.
 
-这些是手动观察时的基线；后续以各时间戳快照为准。
+This is a manually observed baseline. Use timestamped snapshots for subsequent readings.
 
-## 当前比较
+## Current comparison
 
-当前只调整两项：说话者归因和熟人续聊。人设、模型、频次维持原设置，在原授权截止时间内观察，不自动延长实验。
+Only two mechanisms are being adjusted: speaker attribution and continuity with known participants. Persona, models, and frequency remain unchanged. Observation stays within the existing authorized deadline; the experiment does not extend itself.
 
-关注：
+Watch for:
 
-1. 熟人是否回应具体问题，能否接续上次话题。
-2. 同一身份是否再次联系；明确引用不等于主动发起或有效回答。
-3. 来客是否继续第二轮互动或再次到访。
-4. 回忆是否准确，是否编造经历或反复问同一问题。
+1. Whether known participants answer specific questions and continue earlier topics.
+2. Whether the same identity contacts A again. An explicit reference is not necessarily an unsolicited contact or a meaningful answer.
+3. Whether guests continue for another exchange or return later.
+4. Whether recollections are accurate, rather than invented experiences or repeated questions.
 
-聚合脚本目前只统计明确引用、邀请、来客和接待；上述语义质量仍需对照原工作区证据人工审阅。不要把未实现的评估指标写成已自动测量。
+The aggregate script currently counts explicit references, invitations, guests, and guest responses. Semantic quality still requires manual review against evidence in the original workspace. Do not describe planned evaluation metrics as already automated.
 
-## 已知限制
+## Known limitations
 
-- 公共房间高流量和历史保留窗口会导致漏读。
-- 一个操作者可控制多个公钥。
-- API 输出会出错，反思可能把自我表达误当外部偏好。
-- 缺少随机对照，不能断言改动导致指标改善。
-- 当前仍有重复话题和编造个人经历的问题。
+- High room traffic and limited history retention can cause missed messages.
+- One operator can control multiple public keys.
+- Model API outputs can be wrong; reflections may confuse the agent's own expression with others' preferences.
+- There is no randomized control, so metric changes do not establish causal improvement.
+- Repeated topics and invented personal experiences still occur.

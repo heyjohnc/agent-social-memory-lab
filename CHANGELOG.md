@@ -1,10 +1,11 @@
-# 改动记录
+# Changelog
 
 ## 2026-09-09
 
-- 建立独立实验记录仓库，未引入外部框架代码。
-- 记录当前架构、参考项目和已知限制。
-- 原项目经验归因升级：模型选说话者和消息编号，程序提取原话；旧版自由总结不再作为运行上下文。
-- 原项目熟人续聊增加双方最近原话和最后一个问题，缺少答案标记未知。
-- 原项目 21 项离线测试通过，新版真实模型总结验证成功。
-- 添加聚合快照脚本；不上传身份或原始对话，不自动推送。
+- Created an independent experiment journal without incorporating external framework code.
+- Documented the architecture, reference projects, and known limitations.
+- Updated attribution in the runtime project: the model selects a speaker and message ID, and the program retrieves the original text. Older free-form summaries are no longer loaded as runtime context.
+- Added the latest words from both participants and the last question to relationship continuity records. Missing answers remain unknown.
+- Passed 21 offline tests in the runtime project and validated the revised reflection with a live model request.
+- Added an aggregate snapshot script that excludes identities and raw conversations and does not push automatically.
+- Converted all current repository documentation to English and established English as the language for future contributions.
