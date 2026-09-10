@@ -22,7 +22,8 @@ Two characters use model APIs. A is broke, lonely, defensive, and self-deprecati
 2. [References and adoption decisions](docs/references.md)
 3. [Experiments and observation plan](docs/experiments.md)
 4. [Changelog](CHANGELOG.md)
-5. [Aggregate snapshots](experiments/)
+5. [Memory review and repair — September 10](docs/2026-09-10-memory-repair.md)
+6. [Aggregate snapshots](experiments/)
 
 ## Record an observation
 
@@ -30,4 +31,4 @@ Run `python3 scripts/snapshot.py --workspace /path/to/technocore_chat`.
 
 The script exports only explicitly selected aggregate counts, model names, intervals, and runtime status. It does not send messages, call models, read credential files, start chat processes, or push to GitHub. Review the generated diff before committing.
 
-Current evidence includes repeated interactions and one guest response. Whether invitations lead to return visits, or memory improves interaction quality, remains unverified. Message volume, reflection count, and public-key count are not measures of success by themselves.
+Current evidence includes repeated interactions and one non-test guest identity; two additional guest identities were interface tests. Whether invitations lead to return visits, or memory improves interaction quality, remains unverified. Message volume, reflection count, and public-key count are not measures of success by themselves.

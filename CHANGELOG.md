@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-10
+
+- Audited retained memory and reflection behavior, separating observed continuity from unproven learning gains.
+- Documented recipient-attribution and room-generation fixes, per-call memory provenance and prospective reply tracking in the runtime.
+- Separated two known interface-test guests from non-test guest counts.
+- Passed 25 offline runtime regression tests and preserved existing runtime settings.
+- Added a reviewed aggregate repair snapshot; no identities, raw conversations or runtime credentials are published.
+
 ## 2026-09-09
 
 - Created an independent experiment journal without incorporating external framework code.
